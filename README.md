@@ -14,7 +14,7 @@
 
 ## 技术支持
 
-* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1380)
+* [uni-app插件市场](https://ext.dcloud.net.cn/plugin?id=1484)
 
 * [npm包](https://www.npmjs.com/package/hm-uniapp-goods-card)
 
@@ -37,7 +37,7 @@
 在script中引用：
 
 ```javascript
-import componentUpperCamelCase from '@/components/hm-goods-card/index.vue'
+import HmGoodsCard from '@/components/hm-goods-card/index.vue'
 export default {
     components: { HmGoodsCard }
 }
@@ -48,7 +48,7 @@ export default {
 ```html
 <template>
   <div class="test-component">
-    <hm-goods-card></hm-goods-card>
+    <hm-goods-card :options="options"></hm-goods-card>
   </div>
 </template>
 <script>
@@ -58,6 +58,26 @@ export default {
   components: { HmGoodsCard },
   data() {
     return {
+      options: {
+          title: '热门产品',
+          titleimg:
+            '/static/hm-goods-card/images/img_25335_0_0.png',
+          pic:
+            '/static/hm-goods-card/images/img_25335_0_1.png',
+          tradeName: '圆形户外搁脚凳',
+          describe: '搁脚凳',
+          commodity: '凳子',
+          img:
+            '/static/hm-goods-card/images/img_25335_0_2.png',
+          secondName: '深灰色翼背',
+          secondDescribe: '椅子第1版',
+          secondcommodity: '椅子',
+          smallItem:
+            '/static/hm-goods-card/images/img_25335_0_3.png',
+          thirdName: '简易木端',
+          thirdDescribe: '小号桌',
+          thirdcommodity: '桌子'
+        }
     };
   },
   methods: {
@@ -69,6 +89,7 @@ export default {
 </script>
 <style>
 </style>
+
 ```
 
 ## 属性说明
@@ -82,6 +103,11 @@ options对象各个属性说明如下：
 | 属性名        | 类型     | 默认值 | 说明                                                                       |
 |-----------   |---------|--------|----------------------------------------------------------------------------|
 | title        | String  | -      | 标题文字                                                                   |
+| titleimg        | String  | -      | 标题图片                                                                   |
+| pic        | String  | -      | 商品图片                                                                   |
+| tradeName        | String  | -      | 商品名                                                                   |
+| describe        | String  | -      | 商品描述                                                                 |
+| commodity        | String  | -      | 商品                                                              |
 
 ## 事件说明
 
@@ -91,6 +117,6 @@ options对象各个属性说明如下：
 
 ## 更新日志
 
-### 0.0.1(2020-03-07)
+### 0.0.1(2020-03-24)
 
 * 完成第一个版本
